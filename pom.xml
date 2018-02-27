@@ -13,7 +13,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>motan</artifactId>
     <groupId>com.weibo</groupId>
-    <version>1.1.1-SNAPSHOT</version>
+    <version>ak-1.1.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <scm>
         <connection>scm:git:https://github.com/weibocom/motan.git</connection>
@@ -28,7 +28,6 @@
         <module>motan-transport-netty</module>
         <module>motan-transport-netty4</module>
         <module>motan-demo</module>
-        <module>motan-registry-consul</module>
         <module>motan-registry-zookeeper</module>
         <module>motan-benchmark</module>
         <module>motan-extension</module>

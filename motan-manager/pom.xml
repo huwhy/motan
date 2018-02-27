@@ -19,7 +19,7 @@
     <parent>
         <artifactId>motan</artifactId>
         <groupId>com.weibo</groupId>
-        <version>ak-1.1.1-SNAPSHOT</version>
+        <version>ak-1.1.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>motan-manager</artifactId>
@@ -38,11 +38,6 @@
         <dependency>
             <groupId>com.weibo</groupId>
             <artifactId>motan-registry-zookeeper</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.weibo</groupId>
-            <artifactId>motan-registry-consul</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>

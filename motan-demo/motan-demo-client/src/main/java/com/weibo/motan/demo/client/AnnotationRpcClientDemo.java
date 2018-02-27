@@ -42,7 +42,7 @@ public class AnnotationRpcClientDemo {
     }
 
 
-    @Bean(name = "demoMotan")
+    @Bean(name = "motan")
     public ProtocolConfigBean demoMotanProtocolConfig() {
         ProtocolConfigBean config = new ProtocolConfigBean();
         //Id无需设置
@@ -55,23 +55,13 @@ public class AnnotationRpcClientDemo {
         return config;
     }
 
-    @Bean(name = "demoMotan2")
-    public ProtocolConfigBean protocolConfig2() {
-        ProtocolConfigBean config = new ProtocolConfigBean();
-        config.setName("motan");
-        config.setMaxContentLength(1048576);
-        config.setHaStrategy("failover");
-        config.setLoadbalance("roundrobin");
-        return config;
-    }
-
     @Bean(name = "registry")
     public RegistryConfigBean registryConfig() {
         RegistryConfigBean config = new RegistryConfigBean();
-//        config.setRegProtocol("zookeeper");
-//        config.setAddress("127.0.0.1:2181");
-        config.setRegProtocol("direct");
-        config.setAddress("127.0.0.1:8002");
+        config.setRegProtocol("zookeeper");
+        config.setAddress("127.0.0.1:2181");
+//        config.setRegProtocol("direct");
+//        config.setAddress("127.0.0.1:8002");
         return config;
     }
 
@@ -79,7 +69,7 @@ public class AnnotationRpcClientDemo {
     @Bean(name = "motantestClientBasicConfig")
     public BasicRefererConfigBean baseRefererConfig() {
         BasicRefererConfigBean config = new BasicRefererConfigBean();
-        config.setProtocol("demoMotan");
+        config.setProtocol("motan");
         config.setGroup("motan-demo-rpc");
         config.setModule("motan-demo-rpc");
         config.setApplication("myMotanDemo");

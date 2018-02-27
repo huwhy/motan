@@ -22,7 +22,7 @@
     <parent>
         <groupId>com.weibo</groupId>
         <artifactId>motan</artifactId>
-        <version>1.1.1-SNAPSHOT</version>
+        <version>ak-1.1.1</version>
     </parent>
     <artifactId>motan-demo</artifactId>
     <name>motan-demo</name>
@@ -49,35 +49,8 @@
         </dependency>
         <dependency>
             <groupId>com.weibo</groupId>
-            <artifactId>motan-registry-consul</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.weibo</groupId>
             <artifactId>motan-registry-zookeeper</artifactId>
             <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.weibo</groupId>
-            <artifactId>motan-protocol-yar</artifactId>
-            <version>${project.parent.version}</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>netty-all</artifactId>
-                    <groupId>io.netty</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.weibo</groupId>
-            <artifactId>motan-protocol-grpc</artifactId>
-            <version>${project.parent.version}</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>protobuf-java</artifactId>
-                    <groupId>com.google.protobuf</groupId>
-                </exclusion>
-            </exclusions>
         </dependency>
         <dependency>
             <artifactId>protobuf-java</artifactId>
@@ -85,20 +58,9 @@
             <version>3.0.0</version>
         </dependency>
         <dependency>
-            <groupId>com.weibo</groupId>
-            <artifactId>motan-protocol-restful</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore</artifactId>
             <version>4.3.3</version>       
-        </dependency>
-
-        <dependency>
-            <groupId>com.weibo</groupId>
-            <artifactId>serialization-extension</artifactId>
-            <version>${project.parent.version}</version>
         </dependency>
 
         <dependency>

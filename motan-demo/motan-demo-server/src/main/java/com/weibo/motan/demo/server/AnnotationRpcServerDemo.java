@@ -40,7 +40,7 @@ public class AnnotationRpcServerDemo {
     }
 
 
-    @Bean(name="demoMotan")
+    @Bean(name="motan")
     public ProtocolConfigBean protocolConfig1() {
         ProtocolConfigBean config = new ProtocolConfigBean();
         config.setDefault(true);
@@ -49,21 +49,12 @@ public class AnnotationRpcServerDemo {
         return config;
     }
 
-    @Bean(name = "motan")
-    public ProtocolConfigBean protocolConfig2() {
-        ProtocolConfigBean config = new ProtocolConfigBean();
-//        config.setId("demoMotan2");
-        config.setName("motan");
-        config.setMaxContentLength(1048576);
-        return config;
-    }
-
-    @Bean(name="registryConfig1")
+    @Bean(name="registryConfig")
     public RegistryConfigBean registryConfig() {
         RegistryConfigBean config = new RegistryConfigBean();
-//        config.setRegProtocol("zookeeper");
-//        config.setAddress("127.0.0.1:2181");
-        config.setRegProtocol("local");
+        config.setRegProtocol("zookeeper");
+        config.setAddress("127.0.0.1:2181");
+//        config.setRegProtocol("local");
         return config;
     }
 
@@ -71,13 +62,13 @@ public class AnnotationRpcServerDemo {
     @Bean
     public BasicServiceConfigBean baseServiceConfig() {
         BasicServiceConfigBean config = new BasicServiceConfigBean();
-        config.setExport("demoMotan:8002");
+        config.setExport("motan:8002");
         config.setGroup("motan-demo-rpc");
         config.setAccessLog(false);
         config.setShareChannel(true);
         config.setModule("motan-demo-rpc");
         config.setApplication("myMotanDemo");
-        config.setRegistry("registryConfig1");
+        config.setRegistry("registryConfig");
         return config;
     }
 
